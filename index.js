@@ -1,7 +1,7 @@
 import server from "./server.js";
 import mariadb from "./database/connect/mariadb.js";
-import router from "./router.js";
+import postRouter from "./routers/postRouter.js";
 
 mariadb.connect();
 
-server.start(router);
+server.start(postRouter);
