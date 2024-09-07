@@ -1,7 +1,7 @@
-import express from "express";
+import express, { Router } from "express";
 import cors from "cors";
 
-function start(postRouter) {
+function start(postRouter: Router) {
     const app = express();
     const port = 8000;
 

@@ -3,9 +3,9 @@ import Format from "../utills/Format.js";
 import Validator from "../utills/Validator.js";
 import mariadb from "../database/connect/mariadb.js";
 
-const posts = express.Router();
+const postRouter = express.Router();
 
-posts.post("/", (req, res) => {
+postRouter.post("/", (req, res) => {
     const requiredKeys = ["category_id", "contents", "title"];
     const keys = Object.keys(req.body);
     const values = Object.values(req.body);
@@ -28,4 +28,4 @@ posts.post("/", (req, res) => {
     }
 });
 
-export default posts;
+export default postRouter;

@@ -1,13 +1,13 @@
 export default class Format {
-    static #date(date) {
+    static #date(date: Date) {
         return date.toLocaleDateString().replaceAll(". ", "-").slice(0, -1);
     }
 
-    static #isDate(obj) {
-        return obj instanceof Date && !isNaN(obj);
+    static #isDate(obj: any) {
+        return obj instanceof Date && !isNaN(obj as any);
     }
 
-    static record(cols, values) {
+    static record(cols: string[], values: any[]) {
         values = values.map((value, i) => {
             switch (typeof value) {
                 case "number":
