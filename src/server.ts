@@ -1,7 +1,7 @@
 import express, { Router } from "express";
 import cors from "cors";
 
-function start(postRouter: Router) {
+function start(postingRouter: Router) {
     const app = express();
     const port = 8000;
 
@@ -11,7 +11,7 @@ function start(postRouter: Router) {
 
     app.use(express.json());
     app.use(cors());
-    app.use("/posts", postRouter);
+    app.use("/posts", postingRouter);
 }
 
 const server = { start };
