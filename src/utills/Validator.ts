@@ -1,11 +1,11 @@
 export default class Validator {
-    static body(requiredKeys: string[], keys: string[]) {
-        return requiredKeys.every((key) => keys.includes(key));
+    static checkColumns(requiredCols: string[], cols: string[]) {
+        return requiredCols.every((col) => cols.includes(col));
     }
 }
 
 export class ValidatorExtend extends Validator {
-    static bodyExtended(requiredKeys: string[], keys: string[]) {
-        return super.body(requiredKeys, keys);
+    static checkColumnsExtended(requiredCols: string[], cols: string[]) {
+        return super.checkColumns(requiredCols, cols);
     }
 }
