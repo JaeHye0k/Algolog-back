@@ -1,4 +1,4 @@
 import server from "./server.js";
-import postingRouter from "./routers/postingRouter.js";
+import postRouter from "./routers/postRouter.js";
 
-server.start(postingRouter);
+server.start(postRouter);
