@@ -3,10 +3,10 @@ import cors from "cors";
 
 function start(postRouter: Router) {
     const app = express();
-    const port = 8000;
+    const port = process.env.SERVER_PORT;
 
     app.listen(port, () => {
-        console.log(`Server running at http://localhost:${port}/`);
+        console.log(`Server running at http://${process.env.SERVER_IP}:${port}/`);
     });
 
     app.use(express.json());
