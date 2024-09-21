@@ -5,7 +5,7 @@
     "main": "dist/index",
     "types": "dist/index",
     "scripts": {
-        "compile": "tsc && node ./dist/index.js",
+        "compile": "tsc && node --env-file=.env ./dist/index.js",
         "start": "nodemon -e ts --exec \"npm run compile\"",
         "test": "jest"
     },
