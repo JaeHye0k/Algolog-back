@@ -11,6 +11,9 @@ function start(postRouter: Router) {
 
     app.use(express.json());
     app.use(cors());
+    app.get("/", (req, res) => {
+        res.send("루트 입니다.");
+    });
     app.use("/posts", postRouter);
 }
 
